@@ -52,8 +52,8 @@
             </div>
             <!-- === Simple results === -->
             <div class="d-flex justify-content-center">
-                <div class="">
-                    <p class="author lead"><strong>Purple Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
+                <div id="searchLyrics" class="">
+                    <p class="author lead"><strong>Purple 0 Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
 
                 </div>
             </div>
@@ -131,32 +131,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <!-- Custom Script Here -->
-    <script>
-        
-        const inputLyric = document.getElementById('inputLyric');
-        const searchBtn = document.getElementById('searchBtn');
-
-        const apiURL = 'https://api.lyrics.ovh';
-
-        //Search song or artist
-        function searchSong(term){
-            
-        }
-
-        //Event Listeners
-        searchBtn.addEventListener('click', function(){
-            const searchTerm = inputLyric.value.trim();
-            if(!searchTerm){
-                alert('Please type in a search term');
-            }
-            else{
-                fetch(`${apiURL}/suggest/${searchTerm}`)
-                .then(res => res.json())
-                .then(data => console.log(data));
-            }
-		})
-        
-    </script>
+<script src="main.js"></script>
 
 </body>
 
